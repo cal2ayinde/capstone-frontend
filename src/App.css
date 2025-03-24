@@ -1,0 +1,160 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Soft background color for better contrast */
+  color: #333;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px; /* Slightly round edges for a softer feel */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+}
+
+header {
+  background: linear-gradient(45deg, #007bff, #6f42c1); /* Gradient background for header */
+  color: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em; /* Larger font for the title */
+}
+
+header nav {
+  margin-top: 15px; /* Increased margin for improved spacing */
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color: #ffdd57; /* Bright color on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #6f42c1; /* Match footer color with header */
+  color: white;
+  border-radius: 0 0 12px 12px; /* Rounded bottom corners */
+}
+
+h2 {
+  color: #6f42c1; /* Header color matching the theme */
+  border-bottom: 2px solid #6f42c1; /* Match border with header */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+  padding: 15px;
+  background: #ffffff; /* White background for better legibility */
+  border-radius: 10px; /* Rounding the list item borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s; /* Smooth transition on hover */
+}
+
+li:hover {
+  background: rgba(105, 217, 176, 0.2); /* Light green on hover */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #6f42c1; /* Border color matching the theme */
+  border-radius: 5px; /* Rounded input fields */
+  transition: border 0.3s; /* Smooth border transition */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  background: #28a745; /* Green color for buttons */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s; /* Smooth button background transition */
+}
+
+button:hover {
+  background: #218838; /* Darker green on button hover */
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  display: block;
+  width: calc(100% - 20px);
+}
+
+.product-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.product-container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-container div input {
+  width: 80%;
+}
+
+.add-button {
+  background: #28a745; /* Green color for adding products */
+}
+
+.add-button:hover {
+  background: #218838; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  header h1 {
+      font-size: 2em; /* Smaller title on mobile */
+  }
+}
