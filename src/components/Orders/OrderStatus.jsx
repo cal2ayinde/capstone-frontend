@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 function OrderStatus() {
     const [orderId, setOrderId] = useState('');
     const [status, setStatus] = useState(null);
 
     function fetchStatus() {
-        axios.get(`http://localhost:4000/api/orders/${orderId}`)
+        axios.get(`${API_BASE_URL}/api/orders/${orderId}`)
             .then(response => {
                 setStatus(response.data);
             })

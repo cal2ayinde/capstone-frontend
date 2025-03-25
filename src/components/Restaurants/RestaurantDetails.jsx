@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const RestaurantDetails = () => {
     const { id } = useParams();
@@ -11,7 +12,7 @@ const RestaurantDetails = () => {
     useEffect(() => {
         const fetchRestaurantDetails = async () => {
             try {
-                const response = await axios.get(`/api/restaurants/${id}`);
+                const response = await axios.get(`${API_BASE_URL}/api/restaurants/${id}`);
                 console.log(response.data)
                 setRestaurant(response.data.restaurant);
                 setCity(response.data.restaurant.city)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ function Register() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post('http://localhost:4000/api/auth/register', {
+        axios.post(`${API_BASE_URL}/api/auth/register`, {
             username,
             email,
             password,

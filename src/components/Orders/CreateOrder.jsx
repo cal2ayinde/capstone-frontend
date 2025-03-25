@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 function CreateOrder() {
     const [restaurantId, setRestaurantId] = useState(''); // State for restaurant ID
     const [products, setProducts] = useState([{ productId: '', quantity: 1 }]); // State for products list
@@ -10,7 +10,7 @@ function CreateOrder() {
     function handleOrder(e) {
         e.preventDefault(); // Prevent default form submission
         // Send POST request to create an order
-        axios.post('http://localhost:4000/api/orders', {
+        axios.post(`${API_BASE_URL}/api/orders`, {
             restaurant: restaurantId,
             products,
             totalAmount

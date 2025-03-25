@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post('http://localhost:4000/api/auth/login', { email, password })
+        axios.post(`${API_BASE_URL}/api/auth/login`, { email, password })
              .then(response => {
                  alert('Welcome back!');
                  // Implement your login logic here (like saving token)

@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const SearchBar = ({ onSearch }) => {
     const [query, setQuery] = useState('');
@@ -13,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
         e.preventDefault();
         if (query) {
             try {
-                const response = await axios.get(`/api/restaurants/search/city?query=${query}`); // Adjust API endpoint as needed
+                const response = await axios.get(`${API_BASE_URL}/api/restaurants/search/city?query=${query}`); // Adjust API endpoint as needed
                 // const response = await axios.get(`/api/restaurants/search?query=${query}`); // Adjust API endpoint as needed
                 onSearch(response.data);
             } catch (error) {
