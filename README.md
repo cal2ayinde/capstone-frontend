@@ -1,12 +1,35 @@
-# React + Vite
+# Capstone Project: Food Delivery Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This is a food delivery application allowing users to register, login, view restaurants by location, and place orders.
 
-Currently, two official plugins are available:
+## Features
+- User Authentication (Register/Login)
+- Role Management (customer, restaurant owner, admin)
+- Restaurant Search by ZIP code or city
+- Create, Update, Delete Orders
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation Instructions
+1. Clone this repository.
+2. Install dependencies using: `npm install`
+3. Configure your MongoDB URI in the `.env` file.
+4. Start the server: `npm run dev`
 
-## Expanding the ESLint configuration
+## API Endpoints
+- `POST /api/register` - Register a new user
+- `POST /api/auth/login` - Log in an existing user
+- `GET /api/restaurants/search` - Search for restaurants
+- `POST /api/orders` - Create a new order
+- `GET /api/orders/:id` - Get order status
+- `PUT /api/orders/:id` - Update an existing order
+- `DELETE /api/orders/:id` - Delete an order
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Testing with Postman
+Use the following endpoints to test the application:
+- Register User: `POST http://localhost:4000/api/auth/register`
+- Login User: `POST http://localhost:4000/api/auth/login`
+- Search Restaurants: `GET http://localhost:4000/api/restaurants/search?zipcode=12345`
+- Create Order: `POST http://localhost:4000/api/orders`
+- Get Order: `GET http://localhost:4000/api/orders/:id`
+- Update Order: `PUT http://localhost:4000/api/orders/:id`
+- Delete Order: `DELETE http://localhost:4000/api/orders/:id`
